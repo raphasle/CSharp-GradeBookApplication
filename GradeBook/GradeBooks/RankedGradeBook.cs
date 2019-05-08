@@ -27,23 +27,23 @@ namespace GradeBook.GradeBooks
             gradeAverages.Sort();
 
             int index = 0;
-            while (index < studentCount && gradeAverages[index] > averageGrade)
+            while (index < studentCount && gradeAverages[index] < averageGrade)
             {
                 index++;
             }
 
-            double percentage = 1 - index / studentCount;
+            double percentage = (double) index / studentCount;
 
-            if (percentage > 0.8)
+            if (percentage >= 0.8)
             {
                 return 'A';
-            } else if (percentage > 0.6)
+            } else if (percentage >= 0.6)
             {
                 return 'B';
-            } else if (percentage > 0.4)
+            } else if (percentage >= 0.4)
             {
                 return 'C';
-            } else if (percentage > 0.2)
+            } else if (percentage >= 0.2)
             {
                 return 'D';
             }
