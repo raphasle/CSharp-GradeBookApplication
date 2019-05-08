@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GradeBook.GradeBooks;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ namespace GradeBook.GradeBooks
 {
     public class RankedGradeBook : BaseGradeBook
     {
-        public RankedGradeBook(string name) : base(name) => Type = GradeBookType.Ranked;
+        public RankedGradeBook(string name, bool isWeighted) : base(name, isWeighted) => Type = GradeBookType.Ranked;
 
         public override char GetLetterGrade(double averageGrade)
         {
